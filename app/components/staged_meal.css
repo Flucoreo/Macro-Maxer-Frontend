@@ -1,0 +1,20 @@
+.staged-meal {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.staged-meal-data {
+    font-size: 0.9rem;
+    min-width: 300px;
+    flex: 1 1 calc(50% - 15px);
+    background-color: #e5e9e4;
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+
+.staged-meal-title {
+    font-weight: 600;
+    padding-bottom: 5px;
+}

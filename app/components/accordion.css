@@ -1,0 +1,50 @@
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+
+.acordion-container {
+    margin-bottom: 20px;
+}
+
+.nutrition-main{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: rgb(102, 102, 102);
+}
+
+.nutrition-items-data {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: rgb(102, 102, 102);
+}
+
+.nutrition-items {
+    margin: 0 20px;
+}
+
+.general-mimik {
+    border: 1px solid #dee4dc;
+    border-radius: 12px;
+    padding-bottom: 20px;
+    background-color: white;
+}
+
+.nutrient-name {
+    width: 55%;
+}   
+
+.nutrient-ammount-percentage-container {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}

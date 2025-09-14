@@ -1,0 +1,183 @@
+.screen-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.hero-img-containter {
+    position: relative;
+    width: 100%;
+    background-color: black;
+    height: 100dvh;
+    max-height: 1000px;
+}
+
+.hero-img {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: -50px 0; 
+    opacity: 50%;
+}
+
+.hero-text {
+    padding-left: 10%;
+    font-size: clamp(1rem, 1.8vw + 5px, 28px);
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-55%);
+    right: 5%;
+}
+
+.ai {
+    color: #21DE21;
+}
+
+.hero-button {
+    margin-top: 20px;
+    padding: 0.75rem 1.25rem;
+    background-color: #21DE21;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease 0.5s;
+}
+
+.hero-button:hover {
+    padding: 0.75rem 1.7rem;
+    background-color: #81ff81;
+}
+
+main {
+    background-color: rgb(250, 250, 250);
+}
+
+.main-caption {
+    padding: 40px 20px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+.key-features-title {
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.features-container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.each-feature {
+    display: flex;
+    gap: 2%;
+    flex-wrap: wrap-reverse;
+    margin-bottom: 30px;
+}
+
+.feature-img-wrapper, .feature-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-img-wrapper {
+    flex: 1 0 65%;
+}
+
+.feature-text {
+    margin-top: 30px;
+    flex: 1 0 30%;
+}
+
+
+.feature-img-desk {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.feature-img-mobile {
+    margin-top: 30px;
+    width: 100%;
+    display: none;
+}
+
+@media (max-width: 900px) {
+    .feature-img-desk {
+        display: none;
+    }
+    .feature-img-mobile {
+        display: inline-block;
+    }
+}
+
+.feature-text-wrapper {
+    min-width: 275px;
+    background-color: white;
+    padding: 25px;
+    border: 1px solid rgb(144,159,137);
+    border-radius: 10px;
+}
+
+.feature-text-wrapper h4 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: 8px 0;
+}
+
+.feature-text-wrapper p {
+    color: rgb(144,159,137);
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+.feature-text-wrapper img {
+    width: 30px;
+}
+
+.many-benefits {
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 20px 20px;
+}
+
+main ul {
+    text-align: center;
+}
+
+.transform {
+    text-align: center;
+    padding: 30px 30px 10px 20px;
+}
+
+.start-journey {
+    padding: 5px 20px;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+.get-started-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+footer {
+    height: 300px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-text {
+    color: white;
+}

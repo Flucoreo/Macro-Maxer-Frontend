@@ -1,0 +1,46 @@
+{
+    "vitamin_map": {
+        "vitamin_a": "Vitamin A",
+        "vitamin_b1": "Vitamin B1 (Thiamine)",
+        "vitamin_b2": "Vitamin B2 (Riboflavin)",
+        "vitamin_b3": "Vitamin B3 (Niacin)",
+        "vitamin_b5": "Vitamin B5 (Pantothenic acid)",
+        "vitamin_b6": "Vitamin B6 (Pyridoxine)",
+        "vitamin_b9": "Vitamin B9 (Folate)",
+        "vitamin_b12": "Vitamin B12 (Cobalamin)",
+        "vitamin_c": "Vitamin C",
+        "vitamin_d": "Vitamin D",
+        "vitamin_e": "Vitamin E",
+        "vitamin_k": "Vitamin K"
+    },
+
+    "mineral_map": {
+        "sodium": "Sodium",
+        "calcium": "Calcium",
+        "copper": "Copper",
+        "iodine": "Iodine",
+        "iron": "Iron",
+        "magnesium": "Magnesium",
+        "phosphorus": "Phosphorus",
+        "potassium": "Potassium",
+        "selenium": "Selenium",
+        "zinc": "Zinc",
+        "manganese": "Manganese"
+    },
+
+    "carb_map": {
+        "fiber": "Fiber",
+        "starch": "Starch",
+        "sugars": "Added Sugars",
+        "net_carbs": "Net Carbs"
+    },
+
+    "fat_map": {
+        "omega_3": "Omega 3",
+        "omega_6": "Omega 6",
+        "monounsaturated_fat": "Monounsaturated Fat",
+        "saturated_fat": "Saturated Fat",
+        "trans_fat": "Trans Fat",
+        "cholesterol": "Cholesterol"
+    }
+}

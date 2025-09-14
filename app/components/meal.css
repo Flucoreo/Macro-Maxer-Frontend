@@ -1,0 +1,51 @@
+.meal-container {
+    display: flex;
+}
+
+.meal-data {
+    width: 70%;
+}
+
+.meal-img {
+    width: 30%;
+    height: 30%;
+    border-radius: 15px;
+}
+
+.meal-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding-bottom: 3px;
+}
+
+.meal-facts {
+    font-size: 1rem;
+    color: rgb(144,159,137);
+    font-weight: 300;
+    max-width: 25ch;
+    padding-bottom: 15px;
+}
+
+.meal-hold-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.meal-button {
+    padding: 0.5rem 1rem;
+    background-color: rgb(242,244,241);
+    border: none;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.meal-button-icon {
+    margin-left: 8px;
+    width: 20px;
+    height: 20px;
+}
+

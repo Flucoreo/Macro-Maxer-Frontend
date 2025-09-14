@@ -1,0 +1,52 @@
+{
+    "general": {
+        "Protein": "",
+        "Calories":  ""
+    },
+
+    "carbs": {
+        "Added Sugars": "",
+        "Fiber": "",
+        "Net Carbs": "",
+        "Starch": ""
+    },
+
+    "minerals": {
+        "Calcium": "",
+        "Copper": "",
+        "Iodine": "",
+        "Iron": "",
+        "Magnesium": "",
+        "Manganese": "",
+        "Phosphorus": "",
+        "Potassium": "",
+        "Selenium": "",
+        "Sodium": "",
+        "Zinc": ""
+    },
+
+    "fats": {
+        "Cholesterol": "",
+        "Total Fat": "",
+        "Saturated Fat": "",
+        "Omega 3": "",
+        "Omega 6": "",
+        "Monounsaturated Fat": "",
+        "Trans Fat": ""
+    },
+
+    "vitamins": {
+        "Vitamin A": "",
+        "Vitamin B1 (thiamine)": "",
+        "Vitamin B2 (riboflavin)": "",
+        "Vitamin B3 (niacin)": "",
+        "Vitamin B5 (pantothenic acid)": "",
+        "Vitamin B6 (pyridoxine)": "",
+        "Vitamin B9 (folate)": "",
+        "Vitamin B12 (cobalamin)": "",
+        "Vitamin C": "",
+        "Vitamin D": "",
+        "Vitamin E": "",
+        "Vitamin K": ""
+    }
+}

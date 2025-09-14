@@ -1,0 +1,139 @@
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.dashboard-container {
+    padding: 2.5% 6%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2.5%;
+    background-color: rgb(250, 250, 250);
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+
+.dashboard-title {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.dashboard-sub-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.dashboard-main-content {
+    flex: 0 1 70%;
+}
+
+.staged-meals-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.dashboard-side-bar {
+    flex: 0 1 27.5%; 
+}
+
+.text-input-form {
+    width: 100%;
+}
+
+.text-input {
+    width: 100%;
+    height: 150px;
+    padding: 0.5rem;
+    border: 1px solid #e5e9e4;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    text-wrap: wrap;
+}
+
+.submit-button-container {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.submit-button {
+    padding: 0.75rem 1.25rem;
+    background-color: #77cf4b;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+.meals-title {
+    padding: 30px 0;
+    font-weight: 500;
+}
+
+.user-meals {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 12px;
+    min-height: 100px;
+    border: 2px solid #e5e9e4;
+    border-radius: 15px;
+}
+
+.user-meals-placeholder {
+    color: grey;
+}
+
+.save-confirmation {
+    background-color: #45a049;
+    position: fixed;
+    z-index: 1000; 
+    top: 0;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+
+    transform: translateY(-100%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.save-confirmation-show {
+    background-color: #45a049;
+    position: fixed;
+    z-index: 1000; 
+    top: 0;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+
+    transform: translateY(0);
+    transition: transform 0.5s ease-in-out;
+}
+
+@media (max-width: 1100px) {
+    .dashboard-main-content,
+    .dashboard-side-bar  {
+        flex: 1 1 100%;
+    }
+
+    .dashboard-container {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+}
