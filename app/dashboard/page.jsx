@@ -103,7 +103,7 @@ export default function Page(){
                     setUserData({username: userInfo.data.username, useremail: userInfo.data.useremail});
                     updateNutritionTarget(user_preferences.data)
                 } catch (err) {
-                    router.push("/login");
+                    // router.push("/login");
                 }
             }
         }
@@ -123,6 +123,11 @@ export default function Page(){
 
     const handleSubmit = async (e) => {
         e.preventDefault(e);
+
+        if (nutritionForm == ""){
+            alert("Please enter a food item before submitting.");
+            return;
+        }
         setNutritionForm('');
         
         // schedule the job and get it's id
@@ -134,6 +139,12 @@ export default function Page(){
         } catch (err) {
             if (err.status == 403){
                 alert("No more remaining AI credits, will reset tomorow.")
+                setFetchingNutritionData(false)
+                return
+            }
+
+            if (err.status == 503){
+                alert("Failed to get nutrient data.")
                 setFetchingNutritionData(false)
                 return
             }
@@ -297,7 +308,7 @@ export default function Page(){
     return (
         <>
             <p className={fetchingNutritionData ? "save-confirmation-show" : "save-confirmation"}>Loading Nutrition Breakdown...</p>
-            <Nav beginning_letter={userData.username == "" ? ".." : userData.username[0]} user_credits={userData.credits}/>
+            <Nav beginning_letter={userData.username[0]} user_credits={userData.credits}/>
             <main className="dashboard-container">
                 <div className="dashboard-main-content">
                 
@@ -324,12 +335,19 @@ export default function Page(){
                             className="text-input"
                             value={nutritionForm}
                             onChange={handleChange}
-                            placeholder={`Enter meal or recipe. \n\nBe specific, e.g. instead of "1 serving pasta", type "1/2 cup marinara sauce, 1 cup whole grain spagetti noodles"`}
+                            placeholder={`Enter food items or recipe. \n\nBe specific, e.g. instead of "1 serving pasta", type "1/2 cup marinara sauce, 1 cup whole grain spagetti noodles"`}
                         />
+                        {userData.username != "" 
+                        ?
                         <div className="submit-button-container">
                             <button type="submit" className="submit-button">View Nutrient Breakdown</button>
                         </div>
+                        : <p></p>}
                     </form>
+                    {userData.username == "" && <div className="submit-button-container">
+                        <button onClick={() => {router.push("/login")}}className="submit-button">Sign In to Get Nutrition Breakdowns</button>
+                    </div>}
+                        
 
                     {/* <h2 className="meals-title">Meals</h2>
                     <div className="user-meals">

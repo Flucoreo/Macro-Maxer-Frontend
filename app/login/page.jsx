@@ -1,10 +1,10 @@
 "use client";
 
-import "./page.css"
+import "./login.css"
 import React from "react"
 import {useState, useEffect} from "react"
 import { useRouter } from 'next/navigation';
-import {register, login, logout, getUserInfo, test_secured, test_open} from "../auth"
+import {register, login, getUserInfo} from "../auth"
 
 export default function Page(){
 
@@ -18,6 +18,13 @@ export default function Page(){
         password: "",
         repeatpassword: ""
     });
+
+    // check email pattern
+    function isValidEmail(email) {
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return regex.test(email);
+    }
+
 
     // check if a user is already logged in when they visit the login page
     useEffect(() => {
@@ -57,6 +64,12 @@ export default function Page(){
                 return
             }
 
+            if (!isValidEmail(formData.email)){
+                alert("Please provide a valid email address.")
+                setLoading(false);
+                return
+            }
+
             if (formData.password != formData.repeatpassword){
                 alert("Passwords must match!")
                 setLoading(false);
@@ -88,6 +101,12 @@ export default function Page(){
                 return
             }
 
+            if (!isValidEmail(formData.email)){
+                alert("Please provide a valid email address.")
+                setLoading(false);
+                return
+            }
+
             try {
                 const res = await login(formData.email, formData.password)
                 if (res.status === 200){
@@ -103,7 +122,6 @@ export default function Page(){
             }
         }
 
-        
         setFormData({
             username: "",
             email: "",
@@ -115,7 +133,12 @@ export default function Page(){
 
     return (
         <>
-       
+        <div className="logo-container-login">
+            <img className="logo-img-login" src="/images/image.png" alt="MacroMaxer logo"/>
+            <h2 className="logo-login">
+                <a href="/" className="dashboard-link-login">MacroMaxer</a>
+            </h2>
+        </div>
         <div className="center-form">
             {message && <p className="login-message">{message}</p>}
             <div className="sign-form-container">
@@ -135,13 +158,13 @@ export default function Page(){
                         <input type="text" id="email" name="email" className="form-fill" value={formData.email} onChange={handleChange}></input>
 
                         <label htmlFor="password" className="form-text">Password: </label>
-                        <input type="text" id="password" name="password" className="form-fill" value={formData.password} onChange={handleChange}></input>
+                        <input type="password" id="password" name="password" className="form-fill" value={formData.password} onChange={handleChange}></input>
 
                         {showSignup &&
                             <label htmlFor="repeatpassword" className="form-text">Repeat Password: </label>
                         }
                         {showSignup &&
-                            <input type="text" id="repeatpassword" name="repeatpassword" className="form-fill" value={formData.repeatpassword} onChange={handleChange}></input>
+                            <input type="password" id="repeatpassword" name="repeatpassword" className="form-fill" value={formData.repeatpassword} onChange={handleChange}></input>
                         }
 
                         <button type="submit" className="sign-in-up-button">{loading ? "Logging in..." : "Login"}</button>
@@ -150,8 +173,6 @@ export default function Page(){
                             <a onClick={() => setShowSignup(prev => !prev)} className="member-text">{showSignup ? " Login" : " Create an account"}</a>
                         </p>
                     </form>
-                
-
 
             </div>
         </div>

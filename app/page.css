@@ -44,11 +44,14 @@
     font-weight: bold;
     cursor: pointer;
     transition: ease 0.5s;
+    color: black;
+    list-style-type: none;
 }
 
 .hero-button:hover {
     padding: 0.75rem 1.7rem;
     background-color: #81ff81;
+    list-style-type: none;
 }
 
 main {
@@ -168,16 +171,4 @@ main ul {
     display: flex;
     justify-content: center;
     padding-bottom: 50px;
-}
-
-footer {
-    height: 300px;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-text {
-    color: white;
 }

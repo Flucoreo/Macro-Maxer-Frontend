@@ -5,6 +5,16 @@ nav {
     justify-content: space-between;
 }
 
+@media (max-width: 600px) {
+    nav {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        display: none;
+    }
+}
+
 .logo-container {
     display: flex;
     align-items: center;
@@ -58,7 +68,7 @@ nav {
     border-radius: 20px;
     color: white;
     cursor: pointer;
-    margin-left: 30px;
+    margin-left: 25px;
 }
 
 .profile-link {
@@ -68,4 +78,24 @@ nav {
 
 .credits-remaining {
     font-size: 0.8rem;
+}
+
+.nav-button {
+    padding: 0 1.25rem;
+    background-color: #77cf4b;
+    border: none;
+    height: 40px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: ease 0.5s;
+    color: black;
+    list-style-type: none;
+}
+
+.nav-button:hover {
+    list-style-type: none;
+    background-color: black;
+    color: white;
 }

@@ -76,3 +76,28 @@ button:focus {
     text-align: center;
     margin-bottom: 30px;
 }
+
+.logo-container-login {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 60px;
+}
+
+.logo-login {
+    color: #131712;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.logo-img-login {
+    width: 20px;
+}
+
+.dashboard-link-login {
+    color: black;
+    text-decoration: none;
+}

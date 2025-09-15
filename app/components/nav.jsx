@@ -41,22 +41,25 @@ export default function Nav({beginning_letter, user_credits}){
     return (
         <nav>
             <div className="logo-container">
-                <img className="logo-img" src="/images/image.png" alt="Vitabuddy logo"/>
+                <img className="logo-img" src="/images/image.png" alt="MacroMaxer logo"/>
                 <h2 className="logo">
-                    <a href="/dashboard" className="dashboard-link">VitaBuddy</a>
+                    <a href="/dashboard" className="dashboard-link">MacroMaxer</a>
                 </h2>
             </div>
             <ul className="nav-list">
-                <p className="credits-remaining">Credits Remaining: {user_credits && user_credits}</p>
-                <div className="profile-icon"
-                    id="basic-button"
-                    aria-controls={open ? 'basic-menu' : undefined}
-                    aria-haspopup="true"
-                    aria-expanded={open ? 'true' : undefined}
-                    onClick={handleClick}
-                >
-                    {beginning_letter}
-                </div>
+                {user_credits && <p className="credits-remaining">Credits Remaining: {user_credits && user_credits}</p>}
+                {beginning_letter ? 
+                    <div className="profile-icon"
+                        id="basic-button"
+                        aria-controls={open ? 'basic-menu' : undefined}
+                        aria-haspopup="true"
+                        aria-expanded={open ? 'true' : undefined}
+                        onClick={handleClick}
+                    >
+                        {beginning_letter.toUpperCase()}
+                    </div>                    
+                    : <button onClick={() => {router.push("/login")}} className="nav-button">Sign In</button>
+                }
                 <Menu
                     id="basic-menu"
                     anchorEl={anchorEl}

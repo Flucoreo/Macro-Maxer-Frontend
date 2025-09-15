@@ -6,6 +6,7 @@ import { useRef } from "react";
 import { useRouter } from 'next/navigation';
 
 import Nav from "./components/main_page_nav"
+import Footer from "./components/footer"
 
 export default function Home() {
     const featuresRef = useRef(null);
@@ -26,7 +27,7 @@ export default function Home() {
             <div className="hero-img-containter">
                 <img className="hero-img" src="/images/lettuce3.jpeg" alt="Vitabuddy Hero Image"/>
                 <div className="hero-text">
-                    <h1>Vitabuddy: Personalized <br/> Nutrition Analysis With <span className="ai">AI</span></h1>
+                    <h1>MacroMaxer: Personalized <br/> Nutrition Analysis With <span className="ai">AI</span></h1>
                     <div className="hero-button-container">
                         <button onClick={handleClick} className="hero-button">Try For Free</button>
                     </div>
@@ -88,9 +89,7 @@ export default function Home() {
 
             </main>
                 
-            <footer>
-                <p className="footer-text">© 2025 Vitabuddy AI. All rights reserved.</p>
-            </footer>
+            <Footer />
         </div>
         </>
     );
