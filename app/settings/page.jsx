@@ -263,7 +263,7 @@ export default function Page(){
 
                         <div className="recommended-nutrients-containter">
                             <div>
-                                <label className="profile-input" htmlFor="Calories">Maintinance Calories</label> <br/>
+                                <label className="profile-input" htmlFor="Calories">Maintenance Calories</label> <br/>
                                 <input className="profile-input-text-2" type="number" name="Calories" value={defaultData.general.Calories} onChange={(e) => handleNutrientDataChange("general", "Calories", e.target.value)}/> 
                             </div>
 

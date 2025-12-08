@@ -133,12 +133,12 @@ export default function Page(){
 
     return (
         <>
-        <div className="logo-container-login">
+        {/* <div className="logo-container-login">
             <img className="logo-img-login" src="/images/image.png" alt="MacroMaxer logo"/>
             <h2 className="logo-login">
                 <a href="/" className="dashboard-link-login">MacroMaxer</a>
             </h2>
-        </div>
+        </div> */}
         <div className="center-form">
             {message && <p className="login-message">{message}</p>}
             <div className="sign-form-container">
