@@ -13,10 +13,10 @@
     "@emotion/styled": "^11.14.0",
     "@mui/joy": "^5.0.0-beta.52",
     "@mui/material": "^7.1.1",
-    "@mui/material-nextjs": "^7.1.1",
+    "@mui/material-nextjs": "^7.3.6",
     "@mui/x-charts": "^8.5.1",
     "axios": "^1.10.0",
-    "next": "^16.0.7",
+    "next": "^15.5.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
